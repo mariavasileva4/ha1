@@ -109,5 +109,23 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    // Aufgabe2
+    @Test
+    @DisplayName("should only clear screen on first press of clear key")
+    void testClearKeyOnce() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(6);
+        calc.pressBinaryOperationKey("+");
+        calc.pressDigitKey(4);
+        calc.pressClearKey();
+        calc.pressDigitKey(3);
+        calc.pressEqualsKey();
+
+        String expected = "9";
+        String actual = calc.readScreen();
+        assertEquals(expected, actual);
+    }
+
 }
 
