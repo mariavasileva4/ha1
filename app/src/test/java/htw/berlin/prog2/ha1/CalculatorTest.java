@@ -91,7 +91,7 @@ class CalculatorTest {
 
     //TODO hier weitere Tests erstellen
 
-    //Aufgabe 1
+    //Aufgabe_1
     @Test
     @DisplayName("should correctly toggle the sign of a number")
     void testToggleSign() {
