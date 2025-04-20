@@ -127,5 +127,23 @@ class CalculatorTest {
         assertEquals(expected, actual);
     }
 
+    //Aufgabe2
+    @Test
+    @DisplayName("should calculate percentage based on previous value")
+    void testPercentageOperation() {
+        Calculator calc = new Calculator();
+
+        calc.pressDigitKey(2);
+        calc.pressDigitKey(0);
+        calc.pressBinaryOperationKey("+");
+        calc.pressDigitKey(5);
+        calc.pressUnaryOperationKey("%");
+        calc.pressEqualsKey();
+
+        String expected = "21";
+        String actual = calc.readScreen();
+        assertEquals(expected, actual);
+    }
+
 }
 
